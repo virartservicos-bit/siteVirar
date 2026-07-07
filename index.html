@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Virar Conecta | Plataforma para Funerárias</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#735c00",
+                        "surface-container-lowest": "#150C0A",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#5b403c",
+                        "tertiary": "#1a0f0d",
+                        "secondary-container": "#fed65b",
+                        "tertiary-fixed-dim": "#e7bdb1",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#2D1B18",
+                        "surface-bright": "#3E2723",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#ffdad4",
+                        "surface": "#1A0F0D",
+                        "primary-container": "#2A1815",
+                        "on-background": "#f1f1f1",
+                        "on-tertiary-container": "#b18c81",
+                        "surface-container-low": "#1D110F",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#f1f1f1",
+                        "surface-container-high": "#231513",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#d3c3c0",
+                        "primary": "#ffdad4",
+                        "on-secondary-container": "#241a00",
+                        "surface-tint": "#e3beb8",
+                        "on-surface": "#f1f1f1",
+                        "on-secondary-fixed-variant": "#574500",
+                        "outline-variant": "#504442",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-tertiary-fixed": "#2c160e",
+                        "on-tertiary-fixed-variant": "#5d4037",
+                        "primary-fixed": "#ffdad4",
+                        "primary-fixed-dim": "#e3beb8",
+                        "surface-dim": "#120A09",
+                        "tertiary-container": "#331d1a",
+                        "background": "#1A0F0D",
+                        "surface-variant": "#3D2C2A",
+                        "outline": "#857371",
+                        "surface-container": "#1D110F",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#745853",
+                        "inverse-on-surface": "#1a1c1c",
+                        "tertiary-fixed": "#ffdbd0",
+                        "on-primary-container": "#ffdad4",
+                        "on-secondary-fixed": "#241a00",
+                        "secondary-fixed": "#ffe088"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-floral-bg {
+            background:
+                linear-gradient(90deg, rgba(17, 10, 9, 0.98) 0%, rgba(17, 10, 9, 0.9) 38%, rgba(26, 15, 13, 0.58) 64%, rgba(26, 15, 13, 0.72) 100%),
+                url('assets/inicio.png'),
+                radial-gradient(circle at 78% 44%, rgba(244, 227, 198, 0.85) 0%, rgba(244, 227, 198, 0.18) 10%, rgba(26, 15, 13, 0) 24%),
+                radial-gradient(ellipse at 74% 48%, rgba(250, 237, 214, 0.72) 0%, rgba(250, 237, 214, 0.14) 12%, rgba(26, 15, 13, 0) 28%),
+                radial-gradient(ellipse at 82% 38%, rgba(232, 214, 188, 0.58) 0%, rgba(232, 214, 188, 0.12) 12%, rgba(26, 15, 13, 0) 26%),
+                radial-gradient(ellipse at 84% 60%, rgba(218, 194, 166, 0.28) 0%, rgba(218, 194, 166, 0.08) 10%, rgba(26, 15, 13, 0) 24%),
+                radial-gradient(circle at 15% 78%, rgba(115, 92, 0, 0.16) 0%, rgba(115, 92, 0, 0) 20%),
+                radial-gradient(circle at 85% 18%, rgba(115, 92, 0, 0.1) 0%, rgba(115, 92, 0, 0) 18%),
+                radial-gradient(circle at center, #2A1815 0%, #1A0F0D 100%);
+            background-color: #1A0F0D;
+            background-size: cover;
+            background-position: center right;
+            background-repeat: no-repeat;
+        }
+        .hero-floral-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 79% 46%, rgba(255, 244, 223, 0.22) 0%, rgba(255, 244, 223, 0.1) 7%, rgba(255, 244, 223, 0) 18%),
+                radial-gradient(ellipse at 72% 43%, rgba(255, 236, 205, 0.12) 0%, rgba(255, 236, 205, 0) 20%),
+                radial-gradient(ellipse at 86% 51%, rgba(255, 229, 196, 0.12) 0%, rgba(255, 229, 196, 0) 18%),
+                radial-gradient(ellipse at 77% 67%, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0) 22%);
+            pointer-events: none;
+            mix-blend-mode: screen;
+            opacity: 0.9;
+        }
+        .hero-floral-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 76% 80%, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0) 24%),
+                linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.36) 100%);
+            pointer-events: none;
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(254, 214, 91, 0.2);
+        }
+        /* Custom hover effects */
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #FED65B;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .btn-hover-effect {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-hover-effect:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(115, 92, 0, 0.4);
+        }
+        .benefit-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(254, 214, 91, 0.3);
+            box-shadow: 0 10px 30px -10px rgba(115, 92, 0, 0.2);
+        }
+        .plan-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .plan-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+        }
+        .ken-burns-container {
+            overflow: hidden;
+        }
+        .ken-burns-img {
+            transition: transform 10s ease;
+        }
+        .ken-burns-container:hover .ken-burns-img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface bg-[#1A0F0D]">
+<!-- Navegação Superior -->
+<nav class="fixed top-0 w-full z-50 bg-[#1A0F0D]/90 backdrop-blur-xl border-b border-white/5 shadow-2xl">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<a class="text-2xl font-serif font-bold text-[#FFFFFF] tracking-tighter" href="#hero">Virar Conecta</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="nav-link font-sans Manrope tracking-widest uppercase text-[10px] text-[#D3C3C0] hover:text-[#FFFFFF] transition-colors" href="#como-funciona" data-i18n="nav.how-it-works">Como Funciona</a>
+<a class="nav-link font-sans Manrope tracking-widest uppercase text-[10px] text-[#D3C3C0] hover:text-[#FFFFFF] transition-colors" href="#beneficios" data-i18n="nav.benefits">Benefícios</a>
+<a class="nav-link font-sans Manrope tracking-widest uppercase text-[10px] text-[#D3C3C0] hover:text-[#FFFFFF] transition-colors" href="#planos" data-i18n="nav.plans">Planos</a>
+<a class="nav-link font-sans Manrope tracking-widest uppercase text-[10px] text-[#D3C3C0] hover:text-[#FFFFFF] transition-colors" href="#diferenciais" data-i18n="nav.differentials">Diferenciais</a>
+</div>
+<div class="flex items-center space-x-2 ml-4">
+<button class="lang-btn px-3 py-1 text-[10px] font-bold tracking-widest uppercase rounded-sm transition-all hover:bg-white/10 text-[#D3C3C0] hover:text-white" data-lang="pt">Português</button>
+<button class="lang-btn px-3 py-1 text-[10px] font-bold tracking-widest uppercase rounded-sm transition-all hover:bg-white/10 text-[#D3C3C0] hover:text-white" data-lang="en">English</button>
+<button class="lang-btn px-3 py-1 text-[10px] font-bold tracking-widest uppercase rounded-sm transition-all hover:bg-white/10 text-[#D3C3C0] hover:text-white" data-lang="es">Español</button>
+</div>
+</div>
+</nav>
+<!-- Seção Hero -->
+<header class="hero-floral-bg relative overflow-hidden pt-40 pb-28 px-8 min-h-screen flex items-center border-b border-white/5" id="hero">
+<div class="relative z-10 max-w-7xl mx-auto w-full">
+<div class="max-w-3xl space-y-8">
+<h1 class="text-white font-headline text-5xl md:text-7xl leading-tight font-bold tracking-tight max-w-2xl" data-i18n="hero.title">
+                Coloque sua funerária na frente de quem realmente precisa
+            </h1>
+<p class="text-on-surface-variant text-lg md:text-xl leading-relaxed max-w-xl" data-i18n="hero.subtitle">
+                Com o Virar Conecta, sua empresa ganha visibilidade e recebe novos clientes todos os dias em um ambiente de respeito e dignidade.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="bg-secondary text-on-secondary px-10 py-5 rounded-sm font-bold tracking-widest uppercase hover:bg-secondary-container hover:text-on-secondary-container transition-all active:scale-95 shadow-lg shadow-secondary/20 inline-block text-center btn-hover-effect" href="#planos" data-i18n="hero.cta-primary">Assinar agora</a>
+<button class="border border-outline/30 text-white px-10 py-5 rounded-sm font-bold tracking-widest uppercase hover:bg-white/5 transition-all btn-hover-effect" data-i18n="hero.cta-secondary">
+                    Ver Demonstração
+                </button>
+</div>
+</div>
+</div>
+</header>
+<!-- Sobre a Virar -->
+<section class="py-32 px-8 bg-surface" id="sobre">
+<div class="max-w-7xl mx-auto space-y-20">
+<div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
+<div class="space-y-6">
+<span class="text-secondary-container font-bold tracking-widest uppercase text-xs" data-i18n="about.label">Sobre a VIRAR</span>
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface font-bold leading-tight max-w-2xl" data-i18n="about.title">Tecnologia, organização da informação e respeito em cada conexão</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-3xl" data-i18n="about.p1">A VIRAR Soluções Digitais é uma empresa dedicada ao desenvolvimento de plataformas tecnológicas com foco em acessibilidade, organização da informação e inovação.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-3xl" data-i18n="about.p2">Por meio da plataforma VIRAR, conectamos famílias, empresas e profissionais do setor funerário em um ambiente digital estruturado, claro e respeitoso, facilitando o acesso a serviços em momentos que exigem confiança e sensibilidade.</p>
+</div>
+<div class="grid gap-6">
+<div class="bg-primary-container p-10 rounded-sm border-t-2 border-secondary shadow-2xl">
+<span class="text-secondary-container font-bold tracking-widest uppercase text-[10px]" data-i18n="about.mission">Missão</span>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4" data-i18n="about.mission-text">Facilitar o acesso a serviços e informações por meio de tecnologia, promovendo organização, clareza e apoio em momentos que exigem confiança e sensibilidade.</p>
+</div>
+<div class="bg-surface-container-low p-10 rounded-sm border border-white/5 shadow-2xl">
+<span class="text-secondary-container font-bold tracking-widest uppercase text-[10px]" data-i18n="about.vision">Visão</span>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4" data-i18n="about.vision-text">Ser referência em soluções digitais que organizam informações e conectam pessoas e serviços com eficiência, acessibilidade e respeito.</p>
+</div>
+</div>
+</div>
+<div class="space-y-8">
+<div class="space-y-4 text-center">
+<span class="text-secondary-container font-bold tracking-widest uppercase text-xs" data-i18n="about.values">Valores</span>
+<h3 class="font-headline text-3xl md:text-4xl text-white font-bold" data-i18n="about.values-title">Princípios que orientam a VIRAR</h3>
+</div>
+<div class="grid md:grid-cols-2 xl:grid-cols-5 gap-6">
+<div class="benefit-card bg-surface-container-low p-8 rounded-sm group hover:bg-surface-container-high border border-white/5">
+<h4 class="text-on-surface font-headline text-2xl mb-4" data-i18n="about.value1">Respeito e dignidade</h4>
+<p class="text-on-surface-variant leading-relaxed" data-i18n="about.value1-desc">Atuação sensível e responsável em todos os contextos.</p>
+</div>
+<div class="benefit-card bg-surface-container-low p-8 rounded-sm group hover:bg-surface-container-high border border-white/5">
+<h4 class="text-on-surface font-headline text-2xl mb-4" data-i18n="about.value2">Transparência</h4>
+<p class="text-on-surface-variant leading-relaxed" data-i18n="about.value2-desc">Informações claras, acessíveis e confiáveis.</p>
+</div>
+<div class="benefit-card bg-surface-container-low p-8 rounded-sm group hover:bg-surface-container-high border border-white/5">
+<h4 class="text-on-surface font-headline text-2xl mb-4" data-i18n="about.value3">Acessibilidade</h4>
+<p class="text-on-surface-variant leading-relaxed" data-i18n="about.value3-desc">Compromisso com inclusão e diversidade linguística e social.</p>
+</div>
+<div class="benefit-card bg-surface-container-low p-8 rounded-sm group hover:bg-surface-container-high border border-white/5">
+<h4 class="text-on-surface font-headline text-2xl mb-4" data-i18n="about.value4">Inovação com propósito</h4>
+<p class="text-on-surface-variant leading-relaxed" data-i18n="about.value4-desc">Uso da tecnologia para gerar impacto real e positivo.</p>
+</div>
+<div class="benefit-card bg-surface-container-low p-8 rounded-sm group hover:bg-surface-container-high border border-white/5 md:col-span-2 xl:col-span-1">
+<h4 class="text-on-surface font-headline text-2xl mb-4" data-i18n="about.value5">Ética e responsabilidade</h4>
+<p class="text-on-surface-variant leading-relaxed" data-i18n="about.value5-desc">Relações baseadas em confiança, integridade e compromisso social.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Como Funciona -->
+<section class="pt-32 pb-12 px-8 bg-surface-container-low" id="como-funciona">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-24 space-y-4">
+<span class="text-secondary-container font-bold tracking-widest uppercase text-xs" data-i18n="process.label">O Processo</span>
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface font-bold" data-i18n="process.title">Como o Virar Conecta transforma seu negócio</h2>
+</div>
+<div class="relative">
+<div class="absolute left-1/2 top-0 bottom-0 w-px bg-outline/10 hidden md:block"></div>
+<div class="space-y-32">
+<!-- Passo 1 -->
+<div class="relative flex flex-col md:flex-row items-center gap-16">
+<div class="md:w-1/2 text-right hidden md:block">
+<h3 class="font-headline text-3xl text-white mb-4" data-i18n="process.step1">Cadastre sua Empresa</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed" data-i18n="process.step1-desc">Apresente sua funerária com elegância. Insira informações detalhadas, fotos de alta qualidade e todos os serviços exclusivos oferecidos.</p>
+</div>
+<div class="w-14 h-14 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-2xl relative z-10 shadow-xl border-4 border-surface">1</div>
+<div class="md:w-1/2 ken-burns-container">
+<div class="md:hidden mb-6">
+<h3 class="font-headline text-3xl text-white mb-4" data-i18n="process.step1">Cadastre sua Empresa</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed" data-i18n="process.step1-desc">Apresente sua funerária com elegância. Insira informações detalhadas, fotos de alta qualidade e todos os serviços exclusivos oferecidos.</p>
+</div>
+<img alt="Cadastro da empresa na plataforma Virar Conecta" class="rounded-sm shadow-2xl border border-white/5 w-full aspect-[4/3] object-cover ken-burns-img" src="assets/cadastrar empresa.jpeg"/>
+</div>
+</div>
+<!-- Passo 2 -->
+<div class="relative flex flex-col md:flex-row-reverse items-center gap-16">
+<div class="md:w-1/2 text-left hidden md:block">
+<h3 class="font-headline text-3xl text-white mb-4" data-i18n="process.step2">Escolha o Plano</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed" data-i18n="process.step2-desc">Escale sua presença digital com inteligência. Selecione o nível de visibilidade e ferramentas de destaque que aceleram seu crescimento.</p>
+</div>
+<div class="w-14 h-14 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-2xl relative z-10 shadow-xl border-4 border-surface">2</div>
+<div class="md:w-1/2 ken-burns-container">
+<div class="md:hidden mb-6">
+<h3 class="font-headline text-3xl text-white mb-4" data-i18n="process.step2">Escolha o Plano</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed" data-i18n="process.step2-desc">Escale sua presença digital com inteligência. Selecione o nível de visibilidade e ferramentas de destaque que aceleram seu crescimento.</p>
+</div>
+<img alt="Apresentação visual dos planos da plataforma" class="rounded-sm shadow-2xl border border-white/5 w-full aspect-[4/3] object-cover ken-burns-img" src="assets/planos.jpeg"/>
+</div>
+</div>
+<!-- Passo 3 -->
+<div class="relative flex flex-col md:flex-row items-center gap-16">
+<div class="md:w-1/2 text-right hidden md:block">
+<h3 class="font-headline text-3xl text-white mb-4" data-i18n="process.step3">Receba Clientes</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed" data-i18n="process.step3-desc">Transforme intenção em acolhimento. Receba contatos diretos de famílias que buscam transparência e um atendimento de excelência.</p>
+</div>
+<div class="w-14 h-14 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-2xl relative z-10 shadow-xl border-4 border-surface">3</div>
+<div class="md:w-1/2 ken-burns-container">
+<div class="md:hidden mb-6">
+<h3 class="font-headline text-3xl text-white mb-4" data-i18n="process.step3">Receba Clientes</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed" data-i18n="process.step3-desc">Transforme intenção em acolhimento. Receba contatos diretos de famílias que buscam transparência e um atendimento de excelência.</p>
+</div>
+<img alt="Atendimento acolhedor e profissional a famílias" class="rounded-sm shadow-2xl border border-white/5 w-full aspect-[4/3] object-cover ken-burns-img" src="assets/clientes.jpeg"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- VIRAR Conecta -->
+<section class="pt-12 pb-32 px-8 bg-surface-container-low" id="conecta">
+<div class="max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="space-y-4">
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface font-bold leading-tight" data-i18n="conecta.title">Conectando Pessoas Sem Fronteiras</h2>
+<p class="text-secondary-container font-bold tracking-widest uppercase text-xs" data-i18n="conecta.subtitle">VIRAR Conecta</p>
+</div>
+<div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+<p data-i18n="conecta.p1">O VIRAR Conecta é um ecossistema digital que conecta pessoas, famílias, profissionais, empresas e serviços em uma rede acessível, inclusiva e colaborativa.</p>
+<p data-i18n="conecta.p2">Desenvolvido para atender públicos diversos — incluindo pessoas com deficiência, comunidade surda, idosos, estrangeiros, migrantes, refugiados, brasileiros residentes no exterior e famílias multiculturais — o VIRAR elimina barreiras de comunicação e aproxima quem procura de quem oferece soluções.</p>
+<p data-i18n="conecta.p3">Para empresas e profissionais, o VIRAR funciona como uma ponte entre negócios e clientes, ampliando a visibilidade, fortalecendo a presença digital e facilitando o acesso a novos públicos que muitas vezes não são alcançados pelos canais tradicionais.</p>
+<p data-i18n="conecta.p4">Ao reunir diferentes serviços em um único ambiente, a plataforma gera oportunidades reais de conexão, relacionamento e crescimento, ajudando empresas a encontrar clientes e clientes a encontrar empresas de forma simples, rápida e acessível.</p>
+<p data-i18n="conecta.p5">Mais do que tecnologia, o VIRAR promove inclusão, pertencimento e desenvolvimento econômico, criando uma rede onde todos ganham: pessoas, profissionais, empresas e comunidades.</p>
+</div>
+<div class="pt-4 border-t border-white/10 space-y-2">
+<p class="font-bold text-white text-lg" data-i18n="conecta.tagline-title">VIRAR Conecta</p>
+<p class="text-on-surface-variant text-base" data-i18n="conecta.tagline">A ponte inteligente entre quem procura e quem oferece. Mais visibilidade para sua empresa, mais acesso para seus clientes.</p>
+</div>
+</div>
+<div class="relative rounded-sm overflow-hidden shadow-2xl border border-white/5">
+<img alt="Pessoas de diferentes países e culturas conectadas pela plataforma VIRAR" class="w-full h-auto object-cover" src="assets/WhatsApp Image 2026-06-16 at 22.01.57.jpeg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Depoimentos em Vídeo -->
+<section class="py-32 px-8 bg-surface" id="videos">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-24 space-y-4">
+<span class="text-secondary-container font-bold tracking-widest uppercase text-xs" data-i18n="videos.label">Histórias Reais</span>
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface font-bold" data-i18n="videos.title">Ouça quem acredita na transformação</h2>
+<p class="text-on-surface-variant text-lg max-w-2xl mx-auto" data-i18n="videos.subtitle">Conheça as histórias de pessoas que entendem a importância de uma plataforma acessível, inclusiva e colaborativa para conectar quem procura com quem oferece soluções.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="rounded-sm overflow-hidden shadow-2xl border border-white/5 bg-black/30 hover:shadow-secondary/20 transition-all">
+<iframe class="w-full aspect-video" src="https://drive.google.com/file/d/1PnweLkgfyz8Qw8klJmmPTOchUZwDv6qb/preview" allow="autoplay" allowfullscreen></iframe>
+</div>
+<div class="rounded-sm overflow-hidden shadow-2xl border border-white/5 bg-black/30 hover:shadow-secondary/20 transition-all">
+<iframe class="w-full aspect-video" src="https://drive.google.com/file/d/1ubN101TP-fmxgEp8TehDHjrHH4NdmA2L/preview" allow="autoplay" allowfullscreen></iframe>
+</div>
+<div class="rounded-sm overflow-hidden shadow-2xl border border-white/5 bg-black/30 hover:shadow-secondary/20 transition-all">
+<iframe class="w-full aspect-video" src="https://drive.google.com/file/d/1_cW9P2Xen7wS3jR8ArQ9jV3BqEf9_Pfs/preview" allow="autoplay" allowfullscreen></iframe>
+</div>
+<div class="rounded-sm overflow-hidden shadow-2xl border border-white/5 bg-black/30 hover:shadow-secondary/20 transition-all">
+<iframe class="w-full aspect-video" src="https://drive.google.com/file/d/19dU7go0WYdzpoSAuclaMmA2j92-8ayJ7/preview" allow="autoplay" allowfullscreen></iframe>
+</div>
+<div class="rounded-sm overflow-hidden shadow-2xl border border-white/5 bg-black/30 hover:shadow-secondary/20 transition-all">
+<iframe class="w-full aspect-video" src="https://drive.google.com/file/d/1aWD-0qzTcjgXJ2dqDXFx6HRLYqlI2JQp/preview" allow="autoplay" allowfullscreen></iframe>
+</div>
+<div class="rounded-sm overflow-hidden shadow-2xl border border-white/5 bg-black/30 hover:shadow-secondary/20 transition-all">
+<iframe class="w-full aspect-video" src="https://drive.google.com/file/d/1nUiaM0yCRgYzKsm6hlpkGQZFuKfUxYMZ/preview" allow="autoplay" allowfullscreen></iframe>
+</div>
+<div class="rounded-sm overflow-hidden shadow-2xl border border-white/5 bg-black/30 hover:shadow-secondary/20 transition-all">
+<iframe class="w-full aspect-video" src="https://drive.google.com/file/d/1BP0Y1sAU-8n7rK-kf_7UEXAIiuRgcr54/preview" allow="autoplay" allowfullscreen></iframe>
+</div>
+<div class="rounded-sm overflow-hidden shadow-2xl border border-white/5 bg-black/30 hover:shadow-secondary/20 transition-all">
+<iframe class="w-full aspect-video" src="https://drive.google.com/file/d/1qvn_MVbn7aykHfis4iSfpYv84cCYyXoT/preview" allow="autoplay" allowfullscreen></iframe>
+</div>
+<div class="rounded-sm overflow-hidden shadow-2xl border border-white/5 bg-black/30 hover:shadow-secondary/20 transition-all">
+<iframe class="w-full aspect-video" src="https://drive.google.com/file/d/1ZQqwiCQ7bQ-ODYu_JmmNx2FE_gUwg665/preview" allow="autoplay" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefícios -->
+<section class="py-32 px-8 bg-surface" id="beneficios">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-24 space-y-4">
+<span class="text-secondary-container font-bold tracking-widest uppercase text-xs" data-i18n="benefits.label">Vantagens Exclusivas</span>
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface font-bold" data-i18n="benefits.title">Por que o Virar Conecta é essencial?</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Benefício 1 -->
+<div class="benefit-card md:col-span-2 bg-primary-container p-16 rounded-sm border-t-2 border-secondary group hover:bg-[#3D2C2A]">
+<span class="material-symbols-outlined text-secondary-container text-5xl mb-8">visibility</span>
+<h3 class="text-white font-headline text-3xl mb-6" data-i18n="benefits.visibility">Mais visibilidade</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed" data-i18n="benefits.visibility-desc">Sua funerária aparece no topo das buscas quando famílias pesquisam por serviços na sua região. Aumente seu alcance digital com o respaldo de uma plataforma premium.</p>
+</div>
+<!-- Benefício 2 -->
+<div class="benefit-card bg-surface-container-low p-12 rounded-sm group hover:bg-surface-container-high border border-white/5">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-6">verified_user</span>
+<h4 class="text-on-surface font-headline text-2xl mb-4" data-i18n="benefits.highlight">Destaque</h4>
+<p class="text-on-surface-variant" data-i18n="benefits.highlight-desc">Selo de empresa verificada que transmite confiança imediata ao cliente.</p>
+</div>
+<!-- Benefício 3 -->
+<div class="benefit-card bg-surface-container-low p-12 rounded-sm group hover:bg-surface-container-high border border-white/5">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-6">chat</span>
+<h4 class="text-on-surface font-headline text-2xl mb-4" data-i18n="benefits.contact">Contato direto</h4>
+<p class="text-on-surface-variant" data-i18n="benefits.contact-desc">Integração perfeita com WhatsApp para agilizar o primeiro contato em momentos críticos.</p>
+</div>
+<!-- Benefício 4 -->
+<div class="benefit-card bg-primary-container p-12 rounded-sm border-t-2 border-secondary group hover:bg-[#3D2C2A]">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-6">rocket_launch</span>
+<h4 class="text-white font-headline text-2xl mb-4" data-i18n="benefits.simplicity">Simplicidade</h4>
+<p class="text-on-surface-variant" data-i18n="benefits.simplicity-desc">Gerencie sua presença online sem complicações técnicas, focando no atendimento.</p>
+</div>
+<!-- Benefício 5 -->
+<div class="benefit-card bg-surface-container-low p-12 rounded-sm group hover:bg-surface-container-high border border-white/5">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-6">psychology</span>
+<h4 class="text-on-surface font-headline text-2xl mb-4" data-i18n="benefits.audience">Público qualificado</h4>
+<p class="text-on-surface-variant" data-i18n="benefits.audience-desc">Atraia famílias em busca ativa de serviços, reduzindo o tempo de conversão.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Seção de Preços -->
+<section class="py-32 px-8 bg-surface-container-low" id="planos">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-24 space-y-4">
+<span class="text-secondary-container font-bold tracking-widest uppercase text-xs" data-i18n="plans.label">Planos e Assinaturas</span>
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface font-bold" data-i18n="plans.title">Investimento para o seu crescimento</h2>
+</div>
+<div class="grid lg:grid-cols-3 gap-10 items-stretch">
+<!-- Básico -->
+<div class="plan-card bg-surface-container-lowest p-10 rounded-sm shadow-sm flex flex-col border border-white/5">
+<h3 class="font-headline text-xl text-on-surface mb-2" data-i18n="plans.essential">Essencial</h3>
+<div class="text-4xl font-bold text-on-surface mb-8">R$ 165,00<span class="text-sm font-normal text-on-surface-variant" data-i18n="plans.per-month">/mês</span></div>
+<ul class="space-y-6 mb-12 flex-grow">
+<li class="flex items-center gap-4 text-sm"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Cadastro em até 3 categorias</li>
+<li class="flex items-center gap-4 text-sm"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Perfil básico da empresa</li>
+<li class="flex items-center gap-4 text-sm"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Informações de contato</li>
+<li class="flex items-center gap-4 text-sm"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Galeria de fotos (até 10 imagens)</li>
+<li class="flex items-center gap-4 text-sm"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Presença na plataforma</li>
+<li class="flex items-center gap-4 text-sm"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Contato direto com o cliente</li>
+</ul>
+<button id="btn-essencial" class="w-full text-center border border-secondary text-secondary-container py-4 font-bold tracking-widest uppercase text-[10px] hover:bg-secondary/10 transition-all btn-hover-effect cursor-pointer" data-i18n="plans.select">Selecionar</button>
+</div>
+<!-- Padrão -->
+<div class="plan-card bg-surface-container-high p-10 rounded-sm shadow-2xl flex flex-col lg:scale-105 z-10 relative border border-secondary/40">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-white px-6 py-1.5 text-[10px] font-bold tracking-widest uppercase rounded-sm" data-i18n="plans.recommended">Recomendado</div>
+<h3 class="font-headline text-xl text-on-surface mb-2" data-i18n="plans.dignity">Dignidade</h3>
+<div class="text-4xl font-bold text-white mb-8">R$ 399,99<span class="text-sm font-normal text-on-surface-variant" data-i18n="plans.per-month">/mês</span></div>
+<ul class="space-y-6 mb-12 flex-grow">
+<li class="flex items-center gap-4 text-sm"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Cadastro em até 5 categorias</li>
+<li class="flex items-center gap-4 text-sm"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Perfil completo da empresa (descrição e serviços)</li>
+<li class="flex items-center gap-4 text-sm"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Galeria de fotos (até 25 imagens)</li>
+<li class="flex items-center gap-4 text-sm"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Destaque nos resultados de busca</li>
+<li class="flex items-center gap-4 text-sm"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Prioridade por localização</li>
+<li class="flex items-center gap-4 text-sm"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Selo "Empresa Verificada"</li>
+<li class="flex items-center gap-4 text-sm"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Atualização fácil das informações</li>
+<li class="flex items-center gap-4 text-sm"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Suporte prioritário</li>
+<li class="flex items-center gap-4 text-sm"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Contato direto com o cliente</li>
+</ul>
+<button id="btn-dignidade" class="w-full text-center bg-secondary text-white py-4 font-bold tracking-widest uppercase text-[10px] hover:bg-secondary-container hover:text-on-secondary-container transition-all shadow-xl shadow-secondary/30 btn-hover-effect cursor-pointer" data-i18n="plans.subscribe">Assinar Agora</button>
+</div>
+<!-- Premium -->
+<div class="plan-card bg-primary-container p-10 rounded-sm border-2 border-secondary flex flex-col relative overflow-hidden">
+<div class="absolute top-4 right-4 text-secondary-container"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span></div>
+<h3 class="font-headline text-xl text-white mb-2" data-i18n="plans.memorial">Memorial Elite</h3>
+<div class="text-4xl font-bold text-secondary-container mb-8">R$ 799,99<span class="text-sm font-normal text-on-surface-variant" data-i18n="plans.per-month">/mês</span></div>
+<ul class="space-y-6 mb-12 flex-grow">
+<li class="flex items-center gap-4 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Categorias ilimitadas</li>
+<li class="flex items-center gap-4 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Exibição entre as primeiras posições da plataforma</li>
+<li class="flex items-center gap-4 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Prioridade máxima nos resultados de busca</li>
+<li class="flex items-center gap-4 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Maior visibilidade para os usuários</li>
+<li class="flex items-center gap-4 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Galeria de fotos ilimitada</li>
+<li class="flex items-center gap-4 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Página com layout premium</li>
+<li class="flex items-center gap-4 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Perfil com destaque visual aprimorado, fotos ampliadas e melhor organização das informações</li>
+<li class="flex items-center gap-4 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Selo "Empresa Verificada Premium"</li>
+<li class="flex items-center gap-4 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Suporte prioritário avançado</li>
+<li class="flex items-center gap-4 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-secondary-container text-xl">check_circle</span> Contato direto com o cliente</li>
+</ul>
+<button id="btn-elite" class="w-full text-center bg-secondary-container text-on-secondary-container py-4 font-bold tracking-widest uppercase text-[10px] hover:bg-white transition-all btn-hover-effect cursor-pointer" data-i18n="plans.elite">Plano Elite</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Seção de Diferenciais -->
+<section class="py-32 px-8 bg-surface overflow-hidden" id="diferenciais">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-24">
+<div class="md:w-1/2 space-y-10">
+<span class="text-secondary-container font-bold tracking-widest uppercase text-xs" data-i18n="differentials.label">O Diferencial Virar</span>
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface font-bold leading-tight" data-i18n="differentials.title">Uma plataforma especializada com alcance nacional</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-secondary/10 flex items-center justify-center rounded-sm text-secondary-container">
+<span class="material-symbols-outlined text-3xl">public</span>
+</div>
+<div>
+<h4 class="font-bold text-white text-xl mb-2" data-i18n="differentials.network">Rede Integrada</h4>
+<p class="text-on-surface-variant leading-relaxed" data-i18n="differentials.network-desc">Conectamos funerárias em um ecossistema digital robusto, elevando o padrão de atendimento em todo o país.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-secondary/10 flex items-center justify-center rounded-sm text-secondary-container">
+<span class="material-symbols-outlined text-3xl">insights</span>
+</div>
+<div>
+<h4 class="font-bold text-white text-xl mb-2" data-i18n="differentials.data">Dados Reais</h4>
+<p class="text-on-surface-variant leading-relaxed" data-i18n="differentials.data-desc">Acesse métricas precisas de performance para otimizar seus investimentos e garantir o melhor retorno.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 relative ken-burns-container">
+<div class="absolute inset-0 bg-secondary/5 -rotate-3 scale-110"></div>
+<img alt="Equipe e atendimento com alcance nacional" class="relative rounded-sm shadow-2xl border border-white/10 max-h-[700px] w-auto mx-auto ken-burns-img" src="assets/nacional.png"/>
+</div>
+</div>
+</section>
+<!-- Depoimentos -->
+<section class="py-32 px-8 bg-primary-container text-white">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-24 space-y-4">
+<span class="text-secondary-container font-bold tracking-widest uppercase text-xs" data-i18n="testimonials.label">Depoimentos</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold" data-i18n="testimonials.title">Quem confia no nosso trabalho</h2>
+</div>
+<div class="grid md:grid-cols-2 gap-16">
+<div class="p-12 bg-black/30 rounded-sm italic relative border border-white/5 benefit-card">
+<p class="text-on-surface-variant text-xl leading-relaxed mb-10" data-i18n="testimonials.t1">O Virar Conecta trouxe a modernização que o setor precisava. Em poucos meses, vimos um salto qualitativo nas consultas e no reconhecimento da nossa marca digital.</p>
+<div class="flex items-center gap-5">
+<div class="w-14 h-14 rounded-full bg-secondary-container/10 border border-secondary/50 flex items-center justify-center text-secondary-container font-bold text-lg">RC</div>
+<div>
+<p class="font-bold not-italic text-lg" data-i18n="testimonials.t1">O Virar Conecta trouxe a modernização que o setor precisava. Em poucos meses, vimos um salto qualitativo nas consultas e no reconhecimento da nossa marca digital.</p>
+<p class="text-[10px] text-on-surface-variant not-italic uppercase tracking-widest font-bold" data-i18n="testimonials.t1-role">Dono de Funerária - SP</p>
+</div>
+</div>
+</div>
+<div class="p-12 bg-black/30 rounded-sm italic relative border border-white/5 benefit-card">
+<p class="text-on-surface-variant text-xl leading-relaxed mb-10" data-i18n="testimonials.t2">O respeito e a dignidade com que a plataforma trata os serviços funerários é o que nos conquistou. Recebemos contatos altamente qualificados todos os dias.</p>
+<div class="flex items-center gap-5">
+<div class="w-14 h-14 rounded-full bg-secondary-container/10 border border-secondary/50 flex items-center justify-center text-secondary-container font-bold text-lg">AS</div>
+<div>
+<p class="font-bold not-italic text-lg" data-i18n="testimonials.t2">O respeito e a dignidade com que a plataforma trata os serviços funerários é o que nos conquistou. Recebemos contatos altamente qualificados todos os dias.</p>
+<p class="text-[10px] text-on-surface-variant not-italic uppercase tracking-widest font-bold" data-i18n="testimonials.t2-role">Gestora de Serviços Funerários - RJ</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Final -->
+<section class="py-40 px-8 text-center bg-surface-container-low relative border-t border-white/5">
+<div class="max-w-4xl mx-auto space-y-12">
+<h2 class="font-headline text-5xl md:text-6xl text-on-surface font-bold leading-tight" data-i18n="cta.title">Leve sua funerária para o próximo nível com o Virar Conecta</h2>
+<p class="text-on-surface-variant text-xl md:text-2xl max-w-2xl mx-auto" data-i18n="cta.subtitle">Não espere o cliente te encontrar por acaso. Esteja presente onde a jornada de acolhimento começa.</p>
+<a class="bg-secondary text-white px-16 py-6 rounded-sm font-bold tracking-widest uppercase hover:bg-secondary-container hover:text-on-secondary-container transition-all shadow-2xl shadow-secondary/30 active:scale-95 text-sm inline-block btn-hover-effect" href="#planos" data-i18n="cta.button">Começar agora</a>
+<div class="flex items-center justify-center gap-2 pt-6">
+<span class="material-symbols-outlined text-secondary-container text-sm">verified</span>
+<p class="text-[10px] text-outline-variant uppercase tracking-widest font-bold" data-i18n="cta.support">Suporte especializado disponível 24/7</p>
+</div>
+</div>
+</section>
+<!-- Rodapé -->
+<footer class="bg-[#120A09] w-full py-16 px-8 border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center gap-12 max-w-7xl mx-auto">
+<span class="text-on-surface-variant/60 text-sm" data-i18n="footer.copyright">&copy; 2026 Virar Conecta. Todos os direitos reservados.</span>
+</div>
+</footer>
+<script>
+const translations = {
+    pt: {
+        "nav.how-it-works": "Como Funciona",
+        "nav.benefits": "Benefícios",
+        "nav.plans": "Planos",
+        "nav.differentials": "Diferenciais",
+        "hero.title": "Coloque sua funerária na frente de quem realmente precisa",
+        "hero.subtitle": "Com o Virar Conecta, sua empresa ganha visibilidade e recebe novos clientes todos os dias em um ambiente de respeito e dignidade.",
+        "hero.cta-primary": "Assinar agora",
+        "hero.cta-secondary": "Ver Demonstração",
+        "about.label": "Sobre a VIRAR",
+        "about.title": "Tecnologia, organização da informação e respeito em cada conexão",
+        "about.p1": "A VIRAR Soluções Digitais é uma empresa dedicada ao desenvolvimento de plataformas tecnológicas com foco em acessibilidade, organização da informação e inovação.",
+        "about.p2": "Por meio da plataforma VIRAR, conectamos famílias, empresas e profissionais do setor funerário em um ambiente digital estruturado, claro e respeitoso, facilitando o acesso a serviços em momentos que exigem confiança e sensibilidade.",
+        "about.mission": "Missão",
+        "about.mission-text": "Facilitar o acesso a serviços e informações por meio de tecnologia, promovendo organização, clareza e apoio em momentos que exigem confiança e sensibilidade.",
+        "about.vision": "Visão",
+        "about.vision-text": "Ser referência em soluções digitais que organizam informações e conectam pessoas e serviços com eficiência, acessibilidade e respeito.",
+        "about.values": "Valores",
+        "about.values-title": "Princípios que orientam a VIRAR",
+        "about.value1": "Respeito e dignidade",
+        "about.value1-desc": "Atuação sensível e responsável em todos os contextos.",
+        "about.value2": "Transparência",
+        "about.value2-desc": "Informações claras, acessíveis e confiáveis.",
+        "about.value3": "Acessibilidade",
+        "about.value3-desc": "Compromisso com inclusão e diversidade linguística e social.",
+        "about.value4": "Inovação com propósito",
+        "about.value4-desc": "Uso da tecnologia para gerar impacto real e positivo.",
+        "about.value5": "Ética e responsabilidade",
+        "about.value5-desc": "Relações baseadas em confiança, integridade e compromisso social.",
+        "process.label": "O Processo",
+        "process.title": "Como o Virar Conecta transforma seu negócio",
+        "process.step1": "Cadastre sua Empresa",
+        "process.step1-desc": "Apresente sua funerária com elegância. Insira informações detalhadas, fotos de alta qualidade e todos os serviços exclusivos oferecidos.",
+        "process.step2": "Escolha o Plano",
+        "process.step2-desc": "Escale sua presença digital com inteligência. Selecione o nível de visibilidade e ferramentas de destaque que aceleram seu crescimento.",
+        "process.step3": "Receba Clientes",
+        "process.step3-desc": "Transforme intenção em acolhimento. Receba contatos diretos de famílias que buscam transparência e um atendimento de excelência.",
+        "benefits.label": "Vantagens Exclusivas",
+        "benefits.title": "Por que o Virar Conecta é essencial?",
+        "benefits.visibility": "Mais visibilidade",
+        "benefits.visibility-desc": "Sua funerária aparece no topo das buscas quando famílias pesquisam por serviços na sua região. Aumente seu alcance digital com o respaldo de uma plataforma premium.",
+        "benefits.highlight": "Destaque",
+        "benefits.highlight-desc": "Selo de empresa verificada que transmite confiança imediata ao cliente.",
+        "benefits.contact": "Contato direto",
+        "benefits.contact-desc": "Integração perfeita com WhatsApp para agilizar o primeiro contato em momentos críticos.",
+        "benefits.simplicity": "Simplicidade",
+        "benefits.simplicity-desc": "Gerencie sua presença online sem complicações técnicas, focando no atendimento.",
+        "benefits.audience": "Público qualificado",
+        "benefits.audience-desc": "Atraia famílias em busca ativa de serviços, reduzindo o tempo de conversão.",
+        "plans.label": "Planos e Assinaturas",
+        "plans.title": "Investimento para o seu crescimento",
+        "plans.essential": "Essencial",
+        "plans.dignity": "Dignidade",
+        "plans.memorial": "Memorial Elite",
+        "plans.recommended": "Recomendado",
+        "plans.select": "Selecionar",
+        "plans.subscribe": "Assinar Agora",
+        "plans.elite": "Plano Elite",
+        "plans.per-month": "/mês",
+        "differentials.label": "O Diferencial Virar Conecta",
+        "differentials.title": "Uma plataforma especializada com alcance nacional",
+        "differentials.network": "Rede Integrada",
+        "differentials.network-desc": "Conectamos funerárias em um ecossistema digital robusto, elevando o padrão de atendimento em todo o país.",
+        "differentials.data": "Dados Reais",
+        "differentials.data-desc": "Acesse métricas precisas de performance para otimizar seus investimentos e garantir o melhor retorno.",
+        "testimonials.label": "Depoimentos",
+        "testimonials.title": "Quem confia no nosso trabalho",
+        "testimonials.t1": "O Virar Conecta trouxe a modernização que o setor precisava. Em poucos meses, vimos um salto qualitativo nas consultas e no reconhecimento da nossa marca digital.",
+        "testimonials.t1-role": "Dono de Funerária - SP",
+        "testimonials.t2": "O respeito e a dignidade com que a plataforma trata os serviços funerários é o que nos conquistou. Recebemos contatos altamente qualificados todos os dias.",
+        "testimonials.t2-role": "Gestora de Serviços Funerários - RJ",
+        "cta.title": "Leve sua funerária para o próximo nível com o Virar Conecta",
+        "cta.subtitle": "Não espere o cliente te encontrar por acaso. Esteja presente onde a jornada de acolhimento começa.",
+        "cta.button": "Começar agora",
+        "cta.support": "Suporte especializado disponível 24/7",
+        "conecta.title": "Conectando Pessoas Sem Fronteiras",
+        "conecta.subtitle": "VIRAR Conecta",
+        "conecta.p1": "O VIRAR Conecta é um ecossistema digital que conecta pessoas, famílias, profissionais, empresas e serviços em uma rede acessível, inclusiva e colaborativa.",
+        "conecta.p2": "Desenvolvido para atender públicos diversos — incluindo pessoas com deficiência, comunidade surda, idosos, estrangeiros, migrantes, refugiados, brasileiros residentes no exterior e famílias multiculturais — o VIRAR elimina barreiras de comunicação e aproxima quem procura de quem oferece soluções.",
+        "conecta.p3": "Para empresas e profissionais, o VIRAR funciona como uma ponte entre negócios e clientes, ampliando a visibilidade, fortalecendo a presença digital e facilitando o acesso a novos públicos que muitas vezes não são alcançados pelos canais tradicionais.",
+        "conecta.p4": "Ao reunir diferentes serviços em um único ambiente, a plataforma gera oportunidades reais de conexão, relacionamento e crescimento, ajudando empresas a encontrar clientes e clientes a encontrar empresas de forma simples, rápida e acessível.",
+        "conecta.p5": "Mais do que tecnologia, o VIRAR promove inclusão, pertencimento e desenvolvimento econômico, criando uma rede onde todos ganham: pessoas, profissionais, empresas e comunidades.",
+        "conecta.tagline-title": "VIRAR Conecta",
+        "conecta.tagline": "A ponte inteligente entre quem procura e quem oferece. Mais visibilidade para sua empresa, mais acesso para seus clientes.",
+        "videos.label": "Histórias Reais",
+        "videos.title": "Ouça quem acredita na transformação",
+        "videos.subtitle": "Conheça as histórias de pessoas que entendem a importância de uma plataforma acessível, inclusiva e colaborativa para conectar quem procura com quem oferece soluções.",
+        "footer.copyright": "&copy; 2026 Virar Conecta. Todos os direitos reservados."
+    },
+    en: {
+        "nav.how-it-works": "How It Works",
+        "nav.benefits": "Benefits",
+        "nav.plans": "Plans",
+        "nav.differentials": "Differentials",
+        "hero.title": "Put your funeral home in front of those who really need it",
+        "hero.subtitle": "With Virar Conecta, your company gains visibility and receives new clients every day in an environment of respect and dignity.",
+        "hero.cta-primary": "Subscribe Now",
+        "hero.cta-secondary": "View Demo",
+        "about.label": "About VIRAR",
+        "about.title": "Technology, information organization and respect in every connection",
+        "about.p1": "VIRAR Digital Solutions is a company dedicated to developing technological platforms focused on accessibility, information organization and innovation.",
+        "about.p2": "Through the VIRAR platform, we connect families, companies and funeral sector professionals in a structured, clear and respectful digital environment, facilitating access to services in moments that require trust and sensitivity.",
+        "about.mission": "Mission",
+        "about.mission-text": "Facilitate access to services and information through technology, promoting organization, clarity and support in moments that require trust and sensitivity.",
+        "about.vision": "Vision",
+        "about.vision-text": "To be a reference in digital solutions that organize information and connect people and services with efficiency, accessibility and respect.",
+        "about.values": "Values",
+        "about.values-title": "Principles that guide VIRAR",
+        "about.value1": "Respect and dignity",
+        "about.value1-desc": "Sensitive and responsible action in all contexts.",
+        "about.value2": "Transparency",
+        "about.value2-desc": "Clear, accessible and reliable information.",
+        "about.value3": "Accessibility",
+        "about.value3-desc": "Commitment to inclusion and linguistic and social diversity.",
+        "about.value4": "Innovation with purpose",
+        "about.value4-desc": "Use of technology to generate real and positive impact.",
+        "about.value5": "Ethics and responsibility",
+        "about.value5-desc": "Relationships based on trust, integrity and social commitment.",
+        "process.label": "The Process",
+        "process.title": "How Virar Conecta transforms your business",
+        "process.step1": "Register Your Company",
+        "process.step1-desc": "Present your funeral home with elegance. Insert detailed information, high-quality photos and all exclusive services offered.",
+        "process.step2": "Choose the Plan",
+        "process.step2-desc": "Scale your digital presence with intelligence. Select the level of visibility and highlight tools that accelerate your growth.",
+        "process.step3": "Receive Clients",
+        "process.step3-desc": "Transform intention into welcome. Receive direct contacts from families seeking transparency and excellent service.",
+        "benefits.label": "Exclusive Advantages",
+        "benefits.title": "Why is Virar Conecta essential?",
+        "benefits.visibility": "More visibility",
+        "benefits.visibility-desc": "Your funeral home appears at the top of searches when families search for services in your region. Increase your digital reach with the backing of a premium platform.",
+        "benefits.highlight": "Highlight",
+        "benefits.highlight-desc": "Verified company seal that transmits immediate trust to the client.",
+        "benefits.contact": "Direct contact",
+        "benefits.contact-desc": "Perfect integration with WhatsApp to speed up first contact in critical moments.",
+        "benefits.simplicity": "Simplicity",
+        "benefits.simplicity-desc": "Manage your online presence without technical complications, focusing on service.",
+        "benefits.audience": "Qualified audience",
+        "benefits.audience-desc": "Attract families actively seeking services, reducing conversion time.",
+        "plans.label": "Plans and Subscriptions",
+        "plans.title": "Investment for your growth",
+        "plans.essential": "Essential",
+        "plans.dignity": "Dignity",
+        "plans.memorial": "Memorial Elite",
+        "plans.recommended": "Recommended",
+        "plans.select": "Select",
+        "plans.subscribe": "Subscribe Now",
+        "plans.elite": "Elite Plan",
+        "plans.per-month": "/month",
+        "differentials.label": "The Virar Conecta Differential",
+        "differentials.title": "A specialized platform with national reach",
+        "differentials.network": "Integrated Network",
+        "differentials.network-desc": "We connect funeral homes in a robust digital ecosystem, raising the standard of service throughout the country.",
+        "differentials.data": "Real Data",
+        "differentials.data-desc": "Access precise performance metrics to optimize your investments and ensure the best return.",
+        "testimonials.label": "Testimonials",
+        "testimonials.title": "Who trusts our work",
+        "testimonials.t1": "Virar Conecta brought the modernization the sector needed. In a few months, we saw a qualitative leap in consultations and in the recognition of our digital brand.",
+        "testimonials.t1-role": "Funeral Home Owner - SP",
+        "testimonials.t2": "The respect and dignity with which the platform treats funeral services is what won us over. We receive highly qualified contacts every day.",
+        "testimonials.t2-role": "Funeral Services Manager - RJ",
+        "cta.title": "Take your funeral home to the next level with Virar Conecta",
+        "cta.subtitle": "Don't wait for the client to find you by chance. Be present where the welcome journey begins.",
+        "cta.button": "Start Now",
+        "cta.support": "Specialized support available 24/7",
+        "conecta.title": "Connecting People Without Borders",
+        "conecta.subtitle": "VIRAR Conecta",
+        "conecta.p1": "VIRAR Conecta is a digital ecosystem that connects people, families, professionals, companies and services in an accessible, inclusive and collaborative network.",
+        "conecta.p2": "Developed to serve diverse audiences — including people with disabilities, deaf community, elderly, foreigners, migrants, refugees, Brazilians living abroad and multicultural families — VIRAR eliminates communication barriers and brings together those who seek and those who offer solutions.",
+        "conecta.p3": "For companies and professionals, VIRAR works as a bridge between businesses and clients, expanding visibility, strengthening digital presence and facilitating access to new audiences that are often not reached by traditional channels.",
+        "conecta.p4": "By bringing different services together in a single environment, the platform generates real opportunities for connection, relationships and growth, helping companies find clients and clients find companies in a simple, fast and accessible way.",
+        "conecta.p5": "More than technology, VIRAR promotes inclusion, belonging and economic development, creating a network where everyone wins: people, professionals, companies and communities.",
+        "conecta.tagline-title": "VIRAR Conecta",
+        "conecta.tagline": "The intelligent bridge between those who seek and those who offer. More visibility for your company, more access for your customers.",
+        "videos.label": "Real Stories",
+        "videos.title": "Listen to those who believe in transformation",
+        "videos.subtitle": "Discover the stories of people who understand the importance of an accessible, inclusive and collaborative platform to connect those who seek with those who offer solutions.",
+        "footer.copyright": "&copy; 2026 Virar Conecta. All rights reserved."
+    },
+    es: {
+        "nav.how-it-works": "Cómo Funciona",
+        "nav.benefits": "Beneficios",
+        "nav.plans": "Planes",
+        "nav.differentials": "Diferenciales",
+        "hero.title": "Coloque su funeraria frente a quienes realmente lo necesitan",
+        "hero.subtitle": "Con Virar Conecta, su empresa gana visibilidad y recibe nuevos clientes todos los días en un ambiente de respeto y dignidad.",
+        "hero.cta-primary": "Suscribirse Ahora",
+        "hero.cta-secondary": "Ver Demostración",
+        "about.label": "Sobre VIRAR",
+        "about.title": "Tecnología, organización de la información y respeto en cada conexión",
+        "about.p1": "VIRAR Soluciones Digitales es una empresa dedicada al desarrollo de plataformas tecnológicas con enfoque en accesibilidad, organización de la información e innovación.",
+        "about.p2": "A través de la plataforma VIRAR, conectamos familias, empresas y profesionales del sector funerario en un ambiente digital estructurado, claro y respetuoso, facilitando el acceso a servicios en momentos que requieren confianza y sensibilidad.",
+        "about.mission": "Misión",
+        "about.mission-text": "Facilitar el acceso a servicios e información a través de la tecnología, promoviendo organización, claridad y apoyo en momentos que requieren confianza y sensibilidad.",
+        "about.vision": "Visión",
+        "about.vision-text": "Ser referencia en soluciones digitales que organizan información y conectan personas y servicios con eficiencia, accesibilidad y respeto.",
+        "about.values": "Valores",
+        "about.values-title": "Principios que guían a VIRAR",
+        "about.value1": "Respeto y dignidad",
+        "about.value1-desc": "Actuación sensible y responsable en todos los contextos.",
+        "about.value2": "Transparencia",
+        "about.value2-desc": "Informaciones claras, accesibles y confiables.",
+        "about.value3": "Accesibilidad",
+        "about.value3-desc": "Compromiso con inclusión y diversidad lingüística y social.",
+        "about.value4": "Innovación con propósito",
+        "about.value4-desc": "Uso de la tecnología para generar impacto real y positivo.",
+        "about.value5": "Ética y responsabilidad",
+        "about.value5-desc": "Relaciones basadas en confianza, integridad y compromiso social.",
+        "process.label": "El Proceso",
+        "process.title": "Cómo Virar Conecta transforma su negocio",
+        "process.step1": "Registre su Empresa",
+        "process.step1-desc": "Presente su funeraria con elegancia. Inserte información detallada, fotos de alta calidad y todos los servicios exclusivos ofrecidos.",
+        "process.step2": "Elija el Plan",
+        "process.step2-desc": "Escale su presencia digital con inteligencia. Seleccione el nivel de visibilidad y herramientas de destacado que aceleran su crecimiento.",
+        "process.step3": "Reciba Clientes",
+        "process.step3-desc": "Transforme intención en bienvenida. Reciba contactos directos de familias que buscan transparencia y un servicio de excelencia.",
+        "benefits.label": "Ventajas Exclusivas",
+        "benefits.title": "¿Por qué Virar Conecta es esencial?",
+        "benefits.visibility": "Más visibilidad",
+        "benefits.visibility-desc": "Su funeraria aparece en la cima de las búsquedas cuando las familias buscan servicios en su región. Aumente su alcance digital con el respaldo de una plataforma premium.",
+        "benefits.highlight": "Destacado",
+        "benefits.highlight-desc": "Sello de empresa verificada que transmite confianza inmediata al cliente.",
+        "benefits.contact": "Contacto directo",
+        "benefits.contact-desc": "Integración perfecta con WhatsApp para agilizar el primer contacto en momentos críticos.",
+        "benefits.simplicity": "Simplicidad",
+        "benefits.simplicity-desc": "Gestione su presencia online sin complicaciones técnicas, enfocándose en el servicio.",
+        "benefits.audience": "Público calificado",
+        "benefits.audience-desc": "Atraiga familias en búsqueda activa de servicios, reduciendo el tiempo de conversión.",
+        "plans.label": "Planes y Suscripciones",
+        "plans.title": "Inversión para su crecimiento",
+        "plans.essential": "Esencial",
+        "plans.dignity": "Dignidad",
+        "plans.memorial": "Memorial Elite",
+        "plans.recommended": "Recomendado",
+        "plans.select": "Seleccionar",
+        "plans.subscribe": "Suscribirse Ahora",
+        "plans.elite": "Plan Elite",
+        "plans.per-month": "/mes",
+        "differentials.label": "El Diferencial Virar Conecta",
+        "differentials.title": "Una plataforma especializada con alcance nacional",
+        "differentials.network": "Red Integrada",
+        "differentials.network-desc": "Conectamos funerarias en un ecosistema digital robusto, elevando el estándar de servicio en todo el país.",
+        "differentials.data": "Datos Reales",
+        "differentials.data-desc": "Acceda a métricas precisas de rendimiento para optimizar sus inversiones y garantizar el mejor retorno.",
+        "testimonials.label": "Testimonios",
+        "testimonials.title": "Quien confía en nuestro trabajo",
+        "testimonials.t1": "Virar Conecta trajo la modernización que el sector necesitaba. En pocos meses, vimos un salto cualitativo en las consultas y en el reconocimiento de nuestra marca digital.",
+        "testimonials.t1-role": "Dueño de Funeraria - SP",
+        "testimonials.t2": "El respeto y la dignidad con los que la plataforma trata los servicios funerarios es lo que nos conquistó. Recibimos contactos altamente calificados todos los días.",
+        "testimonials.t2-role": "Gestora de Servicios Funerarios - RJ",
+        "cta.title": "Lleve su funeraria al siguiente nivel con Virar Conecta",
+        "cta.subtitle": "No espere que el cliente lo encuentre por casualidad. Esté presente donde comienza el viaje de bienvenida.",
+        "cta.button": "Comenzar Ahora",
+        "cta.support": "Soporte especializado disponible 24/7",
+        "conecta.title": "Conectando Personas Sin Fronteras",
+        "conecta.subtitle": "VIRAR Conecta",
+        "conecta.p1": "VIRAR Conecta es un ecosistema digital que conecta personas, familias, profesionales, empresas y servicios en una red accesible, inclusiva y colaborativa.",
+        "conecta.p2": "Desarrollado para servir a públicos diversos — incluyendo personas con discapacidad, comunidad sorda, adultos mayores, extranjeros, migrantes, refugiados, brasileños residentes en el exterior y familias multiculturales — VIRAR elimina barreras de comunicación y acerca a quienes buscan con quienes ofrecen soluciones.",
+        "conecta.p3": "Para empresas y profesionales, VIRAR funciona como un puente entre negocios y clientes, ampliando la visibilidad, fortaleciendo la presencia digital y facilitando el acceso a nuevas audiencias que a menudo no son alcanzadas por los canales tradicionales.",
+        "conecta.p4": "Al reunir diferentes servicios en un único ambiente, la plataforma genera oportunidades reales de conexión, relaciones y crecimiento, ayudando a empresas a encontrar clientes y clientes a encontrar empresas de forma simple, rápida y accesible.",
+        "conecta.p5": "Más que tecnología, VIRAR promueve inclusión, pertenencia y desarrollo económico, creando una red donde todos ganan: personas, profesionales, empresas y comunidades.",
+        "conecta.tagline-title": "VIRAR Conecta",
+        "conecta.tagline": "El puente inteligente entre quienes buscan y quienes ofrecen. Más visibilidad para su empresa, más acceso para sus clientes.",
+        "videos.label": "Historias Reales",
+        "videos.title": "Escucha a quienes creen en la transformación",
+        "videos.subtitle": "Descubre las historias de personas que entienden la importancia de una plataforma accesible, inclusiva y colaborativa para conectar a quienes buscan con quienes ofrecen soluciones.",
+        "footer.copyright": "&copy; 2026 Virar Conecta. Todos los derechos reservados."
+    }
+};
+
+let currentLang = 'pt';
+
+function setLanguage(lang) {
+    currentLang = lang;
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+    
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('bg-white/20', 'text-white');
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('bg-white/20', 'text-white');
+        }
+    });
+    
+    localStorage.setItem('virar-lang', lang);
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        setLanguage(lang);
+    });
+});
+
+const savedLang = localStorage.getItem('virar-lang');
+if (savedLang && translations[savedLang]) {
+    setLanguage(savedLang);
+} else {
+    setLanguage('pt');
+}
+
+// Integração Mercado Pago
+const MP_PUBLIC_KEY = 'APP_USR-c163380b-2d28-414e-880b-4d7d6fad63b7';
+const MP_ACCESS_TOKEN = 'APP_USR-8269531254298547-060422-f9ffc447ce815a6a787eda05d5538b8c-156629572';
+
+const planos = {
+    essencial: {
+        title: 'Plano Essencial - VIRAR',
+        price: 0.01, // Valor de teste (R$ 0,01)
+        description: 'Assinatura mensal do Plano Essencial'
+    },
+    dignidade: {
+        title: 'Plano Dignidade - VIRAR',
+        price: 0.01, // Valor de teste (R$ 0,01)
+        description: 'Assinatura mensal do Plano Dignidade'
+    },
+    elite: {
+        title: 'Plano Memorial Elite - VIRAR',
+        price: 0.01, // Valor de teste (R$ 0,01)
+        description: 'Assinatura mensal do Plano Memorial Elite'
+    }
+};
+
+async function criarCheckout(plano) {
+    const dados = planos[plano];
+
+    // Abrir nova aba ANTES do await para não ser bloqueada pelo browser
+    const mpWindow = window.open('about:blank', '_blank');
+    if (mpWindow) {
+        mpWindow.document.write('<p style="font-family:sans-serif;padding:40px;color:#555;">Aguarde, conectando ao Mercado Pago...</p>');
+    }
+
+    // Gerar referência única para esta sessão de pagamento
+    const externalRef = 'VIRAR-' + Date.now().toString(36).toUpperCase() + '-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+    localStorage.setItem('virar-ref-pendente', externalRef);
+    localStorage.setItem('virar-plano-pendente', plano);
+
+    // Criar preferência de pagamento via API do Mercado Pago
+    const preference = {
+        items: [{
+            title: dados.title,
+            description: dados.description,
+            quantity: 1,
+            currency_id: 'BRL',
+            unit_price: dados.price
+        }],
+        external_reference: externalRef,
+        payment_methods: {
+            excluded_payment_types: [],
+            excluded_payment_methods: [],
+            installments: 12
+        },
+        back_urls: {
+            success: window.location.origin + '?plano=' + plano,
+            failure: window.location.origin + '?plano=' + plano + '&falha=1',
+            pending: window.location.origin + '?plano=' + plano + '&pendente=1'
+        },
+        auto_return: 'approved'
+    };
+
+    try {
+        const response = await fetch('https://api.mercadopago.com/checkout/preferences', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + MP_ACCESS_TOKEN
+            },
+            body: JSON.stringify(preference)
+        });
+
+        const data = await response.json();
+        
+        if (data.init_point) {
+            // Redirecionar a janela já aberta para o Mercado Pago
+            if (mpWindow) {
+                mpWindow.location.href = data.init_point;
+            } else {
+                window.open(data.init_point, '_blank');
+            }
+            mostrarBannerVerificacao(plano);
+        } else {
+            if (mpWindow) mpWindow.close();
+            alert('Erro ao criar checkout. Tente novamente.');
+            console.error('Erro:', data);
+        }
+    } catch (error) {
+        if (mpWindow) mpWindow.close();
+        alert('Erro ao conectar com Mercado Pago. Tente novamente.');
+        console.error('Erro:', error);
+    }
+}
+
+function mostrarBannerVerificacao(plano) {
+    const anterior = document.getElementById('banner-verificacao');
+    if (anterior) anterior.remove();
+
+    const banner = document.createElement('div');
+    banner.id = 'banner-verificacao';
+    banner.innerHTML = `
+        <div style="position:fixed;bottom:0;left:0;width:100%;background:#1A0F0D;border-top:2px solid #C9A86C;z-index:9999;padding:20px;display:flex;flex-direction:column;align-items:center;gap:14px;">
+            <p style="color:#D3C3C0;margin:0;font-size:15px;text-align:center;">O Mercado Pago foi aberto em outra aba. Após <strong style="color:#C9A86C;">concluir o pagamento (Pix ou cartão)</strong>, clique no botão abaixo para verificar:</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+                <button id="btn-verificar-pgto" onclick="verificarPagamentoAtivo()" style="background:#C9A86C;color:#1A0F0D;border:none;padding:14px 36px;border-radius:4px;font-weight:bold;font-size:15px;cursor:pointer;">✓ Verificar meu pagamento</button>
+                <button onclick="document.getElementById('banner-verificacao').remove();localStorage.removeItem('virar-ref-pendente');localStorage.removeItem('virar-plano-pendente');" style="background:transparent;color:#C9A86C;border:1px solid #C9A86C;padding:14px 24px;border-radius:4px;font-weight:bold;cursor:pointer;">Cancelar</button>
+            </div>
+            <p style="color:#888;font-size:12px;margin:0;">Somente pagamentos confirmados pelo Mercado Pago liberam o acesso ao painel.</p>
+        </div>
+    `;
+    document.body.appendChild(banner);
+}
+
+async function verificarPagamentoAtivo() {
+    const btn = document.getElementById('btn-verificar-pgto');
+    const externalRef = localStorage.getItem('virar-ref-pendente');
+    const plano = localStorage.getItem('virar-plano-pendente');
+
+    if (!externalRef) {
+        mostrarErroPagamento('Nenhuma referência de pagamento encontrada. Inicie o processo novamente.');
+        return;
+    }
+
+    btn.textContent = 'Verificando...';
+    btn.disabled = true;
+
+    try {
+        // Buscar pagamento pela external_reference na API do Mercado Pago
+        const resp = await fetch(
+            'https://api.mercadopago.com/v1/payments/search?external_reference=' + encodeURIComponent(externalRef) + '&sort=date_created&criteria=desc&range=date_created&begin_date=NOW-1HOURS&end_date=NOW',
+            { headers: { 'Authorization': 'Bearer ' + MP_ACCESS_TOKEN } }
+        );
+        const data = await resp.json();
+
+        const pagamentos = (data.results || []);
+        const aprovado = pagamentos.find(p => p.status === 'approved' && p.external_reference === externalRef);
+
+        if (aprovado) {
+            // Pagamento confirmado pela API — gerar código e abrir painel em nova aba
+            localStorage.removeItem('virar-ref-pendente');
+            localStorage.removeItem('virar-plano-pendente');
+            const codigo = gerarCodigoCadastro(plano);
+            localStorage.setItem('virar-codigo-cadastro', codigo);
+            const banner = document.getElementById('banner-verificacao');
+            if (banner) banner.remove();
+            mostrarSucesso(codigo, plano);
+        } else if (pagamentos.find(p => p.status === 'pending' && p.external_reference === externalRef)) {
+            btn.textContent = 'Verificar meu pagamento';
+            btn.disabled = false;
+            mostrarErroPagamento('Pagamento ainda pendente. Aguarde a confirmação do Pix e tente novamente.');
+        } else {
+            btn.textContent = 'Verificar meu pagamento';
+            btn.disabled = false;
+            mostrarErroPagamento('Pagamento não encontrado. Certifique-se de ter pago e aguarde alguns segundos antes de verificar.');
+        }
+    } catch (e) {
+        btn.textContent = 'Verificar meu pagamento';
+        btn.disabled = false;
+        mostrarErroPagamento('Erro ao verificar. Tente novamente.');
+        console.error(e);
+    }
+}
+
+document.getElementById('btn-essencial').addEventListener('click', () => {
+    window.open('https://virar-painel.vercel.app/signup.html?plano=essencial', '_blank');
+});
+document.getElementById('btn-dignidade').addEventListener('click', () => {
+    window.open('https://virar-painel.vercel.app/signup.html?plano=dignidade', '_blank');
+});
+document.getElementById('btn-elite').addEventListener('click', () => {
+    window.open('https://virar-painel.vercel.app/signup.html?plano=elite', '_blank');
+});
+
+// Função para gerar código único de cadastro
+function gerarCodigoCadastro(plano) {
+    const timestamp = Date.now().toString(36).toUpperCase();
+    const random = Math.random().toString(36).substring(2, 8).toUpperCase();
+    const prefixoPlano = {
+        'essencial': 'ESS',
+        'dignidade': 'DIG',
+        'elite': 'ELT'
+    };
+    const prefixo = prefixoPlano[plano] || 'VIR';
+    return prefixo + '-' + timestamp + '-' + random;
+}
+
+// Verificar status do pagamento na URL (retorno do Mercado Pago)
+async function verificarPagamento() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const collectionStatus = urlParams.get('collection_status');
+    const paymentId = urlParams.get('payment_id') || urlParams.get('collection_id');
+    const planoParam = urlParams.get('plano') || localStorage.getItem('virar-plano-pendente');
+
+    if (!collectionStatus && !paymentId) return;
+
+    // Limpar URL sem recarregar
+    window.history.replaceState({}, document.title, window.location.pathname);
+
+    if (collectionStatus === 'approved' && paymentId) {
+        // Verificar pagamento diretamente na API do Mercado Pago
+        try {
+            const resp = await fetch('https://api.mercadopago.com/v1/payments/' + paymentId, {
+                headers: { 'Authorization': 'Bearer ' + MP_ACCESS_TOKEN }
+            });
+            const payment = await resp.json();
+
+            if (payment.status === 'approved') {
+                // Verificar external_reference para garantir que é desta sessão
+                const refSalva = localStorage.getItem('virar-ref-pendente');
+                if (!refSalva || payment.external_reference !== refSalva) {
+                    mostrarErroPagamento('Pagamento não reconhecido. Entre em contato com o suporte.');
+                    return;
+                }
+                // Pagamento confirmado — gerar código e abrir painel em nova aba
+                localStorage.removeItem('virar-ref-pendente');
+                localStorage.removeItem('virar-plano-pendente');
+                const codigo = gerarCodigoCadastro(planoParam);
+                localStorage.setItem('virar-codigo-cadastro', codigo);
+                mostrarSucesso(codigo, planoParam);
+            } else {
+                mostrarErroPagamento('O pagamento ainda não foi confirmado. Aguarde e tente novamente.');
+            }
+        } catch (e) {
+            mostrarErroPagamento('Erro ao verificar pagamento. Tente novamente.');
+        }
+    } else if (collectionStatus === 'rejected' || collectionStatus === 'null') {
+        mostrarErroPagamento('O pagamento foi recusado. Tente novamente.');
+    } else if (collectionStatus === 'pending') {
+        mostrarErroPagamento('Pagamento pendente. Assim que confirmado você receberá o acesso.');
+    }
+}
+
+function mostrarSucesso(codigo, plano) {
+    const nomes = { essencial: 'Essencial', dignidade: 'Dignidade', elite: 'Memorial Elite' };
+    const nomePlano = nomes[plano] || plano;
+    const adminUrl = 'https://admin-two-pied-63.vercel.app/signup.html?codigo=' + codigo + '&plano=' + plano;
+
+    const modal = document.createElement('div');
+    modal.id = 'modal-sucesso';
+    modal.innerHTML = `
+        <div style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px;">
+            <div style="background:#1A0F0D;border:2px solid #C9A86C;border-radius:10px;padding:40px;max-width:480px;width:100%;text-align:center;">
+                <div style="color:#C9A86C;font-size:56px;margin-bottom:12px;">&#10003;</div>
+                <h2 style="color:#fff;font-size:22px;margin:0 0 8px;">Pagamento confirmado!</h2>
+                <p style="color:#D3C3C0;font-size:14px;margin:0 0 24px;">Plano <strong style="color:#C9A86C;">${nomePlano}</strong> ativado com sucesso.</p>
+                <div style="background:#2D1F1D;border:1px solid #C9A86C;border-radius:6px;padding:16px;margin-bottom:20px;">
+                    <p style="color:#888;font-size:12px;margin:0 0 6px;">Seu código de acesso:</p>
+                    <p style="color:#C9A86C;font-size:24px;font-weight:bold;letter-spacing:3px;font-family:monospace;margin:0;">${codigo}</p>
+                </div>
+                <p style="color:#888;font-size:12px;margin:0 0 24px;">Guarde este código. Ele será usado no seu cadastro.</p>
+                <button onclick="window.open('${adminUrl}','_blank');" style="background:#C9A86C;color:#1A0F0D;border:none;padding:14px 36px;border-radius:4px;font-weight:bold;font-size:15px;cursor:pointer;width:100%;margin-bottom:10px;">Acessar painel de cadastro</button>
+                <button onclick="document.getElementById('modal-sucesso').remove();" style="background:transparent;color:#C9A86C;border:1px solid #C9A86C;padding:10px 24px;border-radius:4px;font-weight:bold;cursor:pointer;font-size:13px;">Fechar</button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+}
+
+function mostrarErroPagamento(msg) {
+    const div = document.createElement('div');
+    div.innerHTML = `<div style="position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#1A0F0D;border:1px solid #C9A86C;color:#D3C3C0;padding:16px 28px;border-radius:6px;z-index:9999;max-width:90%;text-align:center;">${msg}</div>`;
+    document.body.appendChild(div);
+    setTimeout(() => div.remove(), 6000);
+}
+
+// Verificação de pagamento movida para signup.html
+</script>
+</body></html>
