@@ -396,7 +396,7 @@
 </div>
 <div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
 <p data-i18n="conecta.p1">O VIRAR Conecta é um ecossistema digital que conecta pessoas, famílias, profissionais, empresas e serviços em uma rede acessível, inclusiva e colaborativa.</p>
-<p data-i18n="conecta.p2">Desenvolvido para atender públicos diversos — incluindo pessoas com deficiência, comunidade surda, idosos, estrangeiros, migrantes, refugiados, brasileiros residentes no exterior e famílias multiculturais — o VIRAR elimina barreiras de comunicação e aproxima quem procura de quem oferece soluções.</p>
+<p data-i18n="conecta.p2">Desenvolvido para atender públicos diversos, incluindo pessoas com deficiência, comunidade surda, idosos, estrangeiros, migrantes, refugiados, brasileiros residentes no exterior e famílias multiculturais, o VIRAR elimina barreiras de comunicação e aproxima quem procura de quem oferece soluções.</p>
 <p data-i18n="conecta.p3">Para empresas e profissionais, o VIRAR funciona como uma ponte entre negócios e clientes, ampliando a visibilidade, fortalecendo a presença digital e facilitando o acesso a novos públicos que muitas vezes não são alcançados pelos canais tradicionais.</p>
 <p data-i18n="conecta.p4">Ao reunir diferentes serviços em um único ambiente, a plataforma gera oportunidades reais de conexão, relacionamento e crescimento, ajudando empresas a encontrar clientes e clientes a encontrar empresas de forma simples, rápida e acessível.</p>
 <p data-i18n="conecta.p5">Mais do que tecnologia, o VIRAR promove inclusão, pertencimento e desenvolvimento econômico, criando uma rede onde todos ganham: pessoas, profissionais, empresas e comunidades.</p>
@@ -700,7 +700,7 @@ const translations = {
         "conecta.title": "Conectando Pessoas Sem Fronteiras",
         "conecta.subtitle": "VIRAR Conecta",
         "conecta.p1": "O VIRAR Conecta é um ecossistema digital que conecta pessoas, famílias, profissionais, empresas e serviços em uma rede acessível, inclusiva e colaborativa.",
-        "conecta.p2": "Desenvolvido para atender públicos diversos — incluindo pessoas com deficiência, comunidade surda, idosos, estrangeiros, migrantes, refugiados, brasileiros residentes no exterior e famílias multiculturais — o VIRAR elimina barreiras de comunicação e aproxima quem procura de quem oferece soluções.",
+        "conecta.p2": "Desenvolvido para atender públicos diversos, incluindo pessoas com deficiência, comunidade surda, idosos, estrangeiros, migrantes, refugiados, brasileiros residentes no exterior e famílias multiculturais, o VIRAR elimina barreiras de comunicação e aproxima quem procura de quem oferece soluções.",
         "conecta.p3": "Para empresas e profissionais, o VIRAR funciona como uma ponte entre negócios e clientes, ampliando a visibilidade, fortalecendo a presença digital e facilitando o acesso a novos públicos que muitas vezes não são alcançados pelos canais tradicionais.",
         "conecta.p4": "Ao reunir diferentes serviços em um único ambiente, a plataforma gera oportunidades reais de conexão, relacionamento e crescimento, ajudando empresas a encontrar clientes e clientes a encontrar empresas de forma simples, rápida e acessível.",
         "conecta.p5": "Mais do que tecnologia, o VIRAR promove inclusão, pertencimento e desenvolvimento econômico, criando uma rede onde todos ganham: pessoas, profissionais, empresas e comunidades.",
@@ -802,7 +802,7 @@ const translations = {
         "conecta.title": "Connecting People Without Borders",
         "conecta.subtitle": "VIRAR Conecta",
         "conecta.p1": "VIRAR Conecta is a digital ecosystem that connects people, families, professionals, companies and services in an accessible, inclusive and collaborative network.",
-        "conecta.p2": "Developed to serve diverse audiences — including people with disabilities, deaf community, elderly, foreigners, migrants, refugees, Brazilians living abroad and multicultural families — VIRAR eliminates communication barriers and brings together those who seek and those who offer solutions.",
+        "conecta.p2": "Developed to serve diverse audiences, including people with disabilities, deaf community, elderly, foreigners, migrants, refugees, Brazilians living abroad and multicultural families, VIRAR eliminates communication barriers and brings together those who seek and those who offer solutions.",
         "conecta.p3": "For companies and professionals, VIRAR works as a bridge between businesses and clients, expanding visibility, strengthening digital presence and facilitating access to new audiences that are often not reached by traditional channels.",
         "conecta.p4": "By bringing different services together in a single environment, the platform generates real opportunities for connection, relationships and growth, helping companies find clients and clients find companies in a simple, fast and accessible way.",
         "conecta.p5": "More than technology, VIRAR promotes inclusion, belonging and economic development, creating a network where everyone wins: people, professionals, companies and communities.",
@@ -904,7 +904,7 @@ const translations = {
         "conecta.title": "Conectando Personas Sin Fronteras",
         "conecta.subtitle": "VIRAR Conecta",
         "conecta.p1": "VIRAR Conecta es un ecosistema digital que conecta personas, familias, profesionales, empresas y servicios en una red accesible, inclusiva y colaborativa.",
-        "conecta.p2": "Desarrollado para servir a públicos diversos — incluyendo personas con discapacidad, comunidad sorda, adultos mayores, extranjeros, migrantes, refugiados, brasileños residentes en el exterior y familias multiculturales — VIRAR elimina barreras de comunicación y acerca a quienes buscan con quienes ofrecen soluciones.",
+        "conecta.p2": "Desarrollado para servir a públicos diversos, incluyendo personas con discapacidad, comunidad sorda, adultos mayores, extranjeros, migrantes, refugiados, brasileños residentes en el exterior y familias multiculturales, VIRAR elimina barreras de comunicación y acerca a quienes buscan con quienes ofrecen soluciones.",
         "conecta.p3": "Para empresas y profesionales, VIRAR funciona como un puente entre negocios y clientes, ampliando la visibilidad, fortaleciendo la presencia digital y facilitando el acceso a nuevas audiencias que a menudo no son alcanzadas por los canales tradicionales.",
         "conecta.p4": "Al reunir diferentes servicios en un único ambiente, la plataforma genera oportunidades reales de conexión, relaciones y crecimiento, ayudando a empresas a encontrar clientes y clientes a encontrar empresas de forma simple, rápida y accesible.",
         "conecta.p5": "Más que tecnología, VIRAR promueve inclusión, pertenencia y desarrollo económico, creando una red donde todos ganan: personas, profesionales, empresas y comunidades.",
@@ -1096,7 +1096,7 @@ async function verificarPagamentoAtivo() {
         const aprovado = pagamentos.find(p => p.status === 'approved' && p.external_reference === externalRef);
 
         if (aprovado) {
-            // Pagamento confirmado pela API — gerar código e abrir painel em nova aba
+            // Pagamento confirmado pela API - gerar código e abrir painel em nova aba
             localStorage.removeItem('virar-ref-pendente');
             localStorage.removeItem('virar-plano-pendente');
             const codigo = gerarCodigoCadastro(plano);
@@ -1167,7 +1167,7 @@ async function verificarPagamento() {
                     mostrarErroPagamento('Pagamento não reconhecido. Entre em contato com o suporte.');
                     return;
                 }
-                // Pagamento confirmado — gerar código e abrir painel em nova aba
+                // Pagamento confirmado - gerar código e abrir painel em nova aba
                 localStorage.removeItem('virar-ref-pendente');
                 localStorage.removeItem('virar-plano-pendente');
                 const codigo = gerarCodigoCadastro(planoParam);
